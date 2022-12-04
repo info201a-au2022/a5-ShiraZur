@@ -1,8 +1,10 @@
-# Shiny app
+#library("shiny")
+library("dplyr")
+library("ggplot2")
 
-install.packages("shiny")
-library("shiny")
+#sourcing the two other files 
+source("./app_ui.R", local = knitr::knit_global())
+source("./app_server.R", local = knitr::knit_global())
 
-source("app_ui.R")
-source("app_server.R")
+# Run the application 
 shinyApp(ui = ui, server = server)
